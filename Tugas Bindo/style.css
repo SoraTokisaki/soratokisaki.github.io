@@ -1,0 +1,1040 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Fuzzy+Bubbles:wght@400;700&family=Josefin+Sans:ital,wght@0,200;0,300;1,300;1,400&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,300&display=swap');
+:root
+{
+	--bg-black-900:#f2f2fc;
+	--bg-black-100:#fdf9ff;
+	--bg-black-50:#e8dfec;
+	--text-black-900:#302e4d;
+	--text-black-700:#504e70;
+
+
+	/* colors nav*/
+	--body-color: #E4E9F7;
+	--sidebar-color:#FFF;
+	--primary-color:#695CFE;
+	--primary-color-light:#F6F5FF;
+	--toggle-color: #DDD;
+	--text-color: #707070;
+
+	/* Transition */
+	--trans-02: all 0.2s ease;
+	--trans-03: all 0.3s ease;
+	--trans-04: all 0.4s ease;
+	--trans-05: all 0.5s ease;
+	
+
+	/* nav des*/
+	--clr: #222327;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* sidebar */
+
+
+
+
+body
+{
+	line-height: 1.5;
+	font-size: 16px;
+	height:100vh;
+	
+	
+}
+
+
+
+*
+{
+	font-family: 'Poppins',sans-serif;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	box-sizing: border-box;
+
+}
+::before,::after
+{
+	box-sizing: border-box;
+
+}
+
+.tablet{
+	display: none;
+}
+
+.hidden
+{
+	display: none !important;
+}
+.main-content
+{
+	padding-left: 270px;
+}
+.padd-15
+{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.container
+{
+	max-width: 1100px;
+	width: 100%;
+	margin: auto;
+	
+
+}
+.section .container
+{
+	padding-top: 60px;
+	padding-bottom: 70px;
+}
+.section-judul
+{
+	flex: 0 0 100%;
+	max-width: 100%;
+	margin-bottom: 60px;
+
+	
+}
+.section-judul h2
+{
+	font-size: 40px;
+	color: white;
+	font-weight:700;
+	position: relative;
+}
+.section-judul h2::before
+{
+	content: '';
+	height: 4px;
+	width: 50px;
+	background-color: #1428A9; 
+	position: absolute;
+	top: 100%;
+	left: 0;
+
+}
+.section-judul h2::after
+{
+	content: '';
+	height: 4px;
+	width: 25px;
+	background-color: #1428A9;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin-top: 8px;
+}
+.row
+{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	position: relative; 
+}
+.baca-hikayat
+{
+	position: absolute;
+
+	left: 800px;
+	top: 100px;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 12px 35px;
+	color: white; 
+	border-radius: 40px;
+	display: inline-block;
+	white-space:nowrap;
+	border:none;
+	background: #B9D4DD;
+	transition:  all 0.3s ease;
+	font-family: 'Akaya Telivigala', cursive;
+
+
+}
+.baca-hikayat:hover{
+	transform: scale(1.05);
+}
+
+
+/* nav design*/
+.des{
+	position: relative;
+	width: 380px;
+	height: 70px;
+	background:#B9D4DD;
+	top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+
+}
+
+.des ul{
+	display: flex;
+	width: 350px;
+	
+}
+
+.des ul li{
+	position: relative;
+	list-style: none;
+	width: 70px;
+	height: 70px;
+	z-index: 1;
+}
+
+.des ul li a {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+}
+
+.des ul li a .ic-des{
+	position: relative;
+	display: block;
+	line-height: 75px;
+	font-size: 1.5em;
+	text-align: center;
+	transition: 0.5s;
+	color: white;
+}
+
+.des ul li.active a .ic-des{
+	transform: translateY(-32px);
+	
+}
+
+.des ul li a .te-des{
+	position: absolute;
+	color: white ;
+	font-weight: 400;
+	font-size: 0.75em;
+	letter-spacing: 0.05em ;
+	transition: 0.5s;
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.des ul li.active a .te-des
+{
+	opacity: 1;
+	transform: translateY(10px)
+}
+
+.indicator{
+	position: absolute;
+	left: 55px;
+	top:-50%;
+	width: 70px;
+	height: 70px;
+	background: var(--primary-color);
+	border-radius: 50%;
+	border: 6px solid  #406175;
+	transition: 0.5s ;
+
+
+}
+
+.indicator::before{
+
+	content: '' ;
+	position: absolute;
+	top: 50%;
+	left:-22px ;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-right-radius: 20px;
+	box-shadow: 0px -10px 0 0 #406175;
+}
+
+
+
+.indicator::after{
+
+	content: '' ;
+	position: absolute;
+	top: 50%;
+	right:-22px ;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-left-radius: 20px;
+	box-shadow: 0px -10px 0 0 #406175;
+}
+
+
+.des ul li:nth-child(1).active ~ .indicator{
+	transform: translateX(calc(70px * 0));
+}
+
+.des ul li:nth-child(2).active ~ .indicator{
+	transform: translateX(calc(110px * 1));
+}
+.des ul li:nth-child(3).active ~ .indicator{
+	transform: translateX(calc(110px * 2));
+}
+/* nav des*/
+
+
+.about-des{
+	position: absolute;
+	width: 380px;
+	height: 70px;
+	background:#B9D4DD;
+	top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	right: 60px;
+
+}
+
+.about-des ul{
+	display: flex;
+	width: 300px;
+	
+}
+
+.about-des ul li{
+	position: relative;
+	list-style: none;
+	width:1200px;
+	height: 70px;
+	z-index: 100;
+}
+.about-des ul li a {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+}
+
+.about-des ul li a .ic-des{
+	position: relative;
+	display: block;
+	line-height: 75px;
+	font-size: 1.5em;
+	text-align: center;
+	transition: 0.5s;
+	color: white;
+	
+	
+}
+
+.about-des ul li.active a .ic-des{
+	transform: translateY(-32px);
+	
+}
+
+.about-des ul li a .te-des{
+	position: absolute;
+	color: white ;
+	font-weight: 400;
+	font-size: 0.75em;
+	letter-spacing: 0.05em ;
+	transition: 0.5s;
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+
+.yosua .indicator{
+	position: absolute;
+	left: 55px;
+	top:-50%;
+	width: 70px;
+	height: 70px;
+	background: var(--primary-color);
+	border-radius: 50%;
+	border: 6px solid  white;
+	transition: 0.5s ;
+
+
+}
+
+.yosua .indicator::before{
+
+	content: '' ;
+	position: absolute;
+	top: 50%;
+	left:-22px ;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-right-radius: 20px;
+	box-shadow: 0px -10px 0 0 white;
+}
+
+
+
+.yosua .indicator::after{
+
+	content: '' ;
+	position: absolute;
+	top: 50%;
+	right:-22px ;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-left-radius: 20px;
+	box-shadow: 0px -10px 0 0 white;
+}
+
+.about-des ul li.active a .te-des
+{
+	opacity: 1;
+	transform: translateY(10px)
+}
+
+.about-des ul li:nth-child(1).active ~ .yosua .indicator{
+	transform: translateX(calc(80px * 0));
+}
+
+.about-des ul li:nth-child(2).active ~ .yosua .indicator{
+	transform: translateX(calc(100px * 1));
+}
+.about-des ul li:nth-child(3).active ~ .yosua .indicator{
+	transform: translateX(calc(100px * 2));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navdes-con{
+	width: 90%;
+	margin-inline: auto;
+	
+}
+
+.navdes{
+	
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(gambar/home1.jpg);
+	background-size: cover;
+	position: center;
+	background-repeat: no-repeat;
+	
+}
+
+.navdes .navdes-box{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.navdes .navdes-box .box img{
+	width: 50px;
+	display: flex;
+	align-items: center;
+	left: 70px;
+	position: relative;
+	top: 20px;
+	
+}
+.navdes .navdes-box .box h1{
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Akaya Telivigala', cursive;
+	top: 90px;
+	position: absolute;
+
+	
+} 
+.navdes .navdes-box .box h2{
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Poppins', sans-serif;
+	top: 120px;
+	position: absolute;
+}
+.navdes .navdes-box .des ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.navdes .navdes-box .des ul li{
+	list-style-type: none;
+	margin-left: 40px;
+}
+
+.navdes .navdes-box .des ul li a{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+	.sidebar{
+	
+		position: fixed;
+		top:0;
+		left: 0;
+		height: 100%;
+		 width: 260px;
+		 padding: 10px 14px;
+		 background: var(--sidebar-color);
+		 transition: var(--trans-05);
+		 z-index: 100;
+	}
+	
+	.sidebar.close{
+		width: 78px;
+	}
+	
+	
+	.sidebar .text{
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--text-color);
+		transition: var(--trans-03);
+		white-space: nowrap;
+		opacity: 1;
+	
+	}
+	
+	.sidebar.close .text{
+		opacity: 0;
+	}
+	
+	
+		
+	.sidebar .image{
+		min-width: 60px;
+		display: flex;
+		align-items: center;
+	
+	}
+	
+	.sidebar li{
+		height: 60px;
+		margin-top: 10px;
+		list-style: none;
+		display: inline-flex;
+		align-items: center;
+	}
+	
+	.sidebar li .nav-icon
+	{
+	
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 60px;
+		font-size: 20px;
+		
+	
+	}
+	
+	
+		
+
+	
+		
+	
+	
+	.sidebar header{
+		position: relative;
+	
+	}
+	
+	.sidebar .image-text img{
+		width: 50px;
+		border-radius: 6px;
+		
+	}
+	
+	.sidebar header .image-text{
+		display: flex;
+		align-items: center;
+	}
+	
+	
+	
+	.sidebar header .header-text{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.header-text .name{
+		font-weight: 600;
+		font-size: 11px;
+		font-family: 'Akaya Telivigala', cursive;
+	
+	
+	}
+	
+	.header-text .rpl{
+		margin-top: -2px;
+	}
+	
+	.sidebar header .toggle{
+		position: absolute;
+		top: 50%;
+		right: -25px;
+		
+		transform: translateY(-50%) rotate(180deg);
+		height: 25px;
+		width: 25px;
+		background: var(--primary-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		color: var(--sidebar-color);
+		font-size: 22px;
+		transition: var(--trans-03);
+	
+	}
+	
+	.sidebar.close header .toggle{
+		transform: translateY(-50%);
+	}
+	.sidebar .menu{
+		margin-top: 90px;
+	}
+	
+	.sidebar .search-box{
+		background: var(--primary-color-light);
+		border-radius: 6px;
+		transition: var(--trans-05);
+	}
+	
+	
+	 .search-box input{
+		 height: 100%;
+		 width: 100%;
+		 outline: none;
+		 border: none;
+		 border-radius: 6px;
+		 background: var(--primary-color-light);
+	 }
+	
+	.sidebar li a{
+		height: 100%;
+		width: 150px;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		border-radius: 10px;
+		transition: var(--trans-04);
+		
+	}
+
+	.sidebar.close li a:hover {
+		width: 58px;
+		transition: var(--trans-04);
+	}
+	
+	.sidebar li a:hover {
+		background: var(--primary-color);
+		
+	
+	
+	
+	}
+	
+	.sidebar li a:hover .nav-icon,
+	.sidebar li a:hover .text
+	{
+		color: var(--sidebar-color);
+		transition: var(--trans-02);
+	}
+	
+	.sidebar .menu-bar{
+		height: calc(100% - 50px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	
+	.home{
+		position: relative;
+		
+		height: 100vh;
+		width: calc(100% - 80px);
+	
+		transition: var(--trans-05);
+	}
+	
+	.sidebar.sidebar.close ~ .home{
+		left: 88px;
+		width: calc(100% - 80px);
+	}
+	
+	.home .text{
+		font-size: 30px;
+		font-weight: 500;
+		color: var(--text-color);
+		padding: 8px 40px;
+	}
+
+
+
+
+
+
+
+/*  home */
+.home
+{
+	min-height: 100vh;
+	display: flex;
+	color: var(--text-black-900);
+}
+
+
+.home-info h3{
+
+position: absolute;
+left: 80px;
+top: -180px;
+
+}
+.home .home-info
+{
+	flex: 0 0 60%;
+	max-width: 60%;
+	
+}
+h3.selamat
+{
+	font-size: 36px;
+	margin-left: 28px 0;
+	font-family: 'Akaya Telivigala', cursive;
+color: white;
+margin-top: 60px;
+
+}
+.home-info p {
+
+	position: absolute;
+	color: white;
+	text-align: justify;
+	font-size: 18px;
+	margin-left: 800px;
+	right: -80px;
+	top: -80px;
+
+
+}
+
+h3.selamat span
+{
+	font-family: 'Fuzzy Bubbles', cursive;
+	font-size: 34px;
+	color: white;
+
+}
+
+h3.bahasa
+{
+	font-size: 28px;
+	margin: 15px 0;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	top: -70px;
+}
+.typing
+{
+}
+
+.home .home-img 
+{
+	flex: 0 0 40%;
+	max-width: 40%;
+	text-align: center;
+	position: relative;
+}
+
+
+.home .home-img img
+{
+	margin: auto;
+	
+
+	height: 300px;
+}
+
+.yosuamenangis .h2 
+{
+	font-size: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .about-content
+{
+	flex: 0 0 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 80px;
+	
+
+}
+ .about-content .about-text
+ {
+
+ 	flex: 0 0 100%;
+ 	max-width: 100%;
+	
+
+ }
+.about-content .about-text h3
+ {
+	position: relative;
+	right: 100px;
+ 	text-align: center;
+ 	font-size: 24px;
+ 	margin-bottom: 15px;
+ 	font-weight: 700px;
+ 	color: var(--text-black-900);
+ 	font-family: 'Josefin Sans', sans-serif;
+ }
+
+ .about-content .about-text hr{
+	position: absolute;
+	left: 300px;
+ }
+.about-content .about-text h3 span
+{
+	
+	color: #1428A9;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.about-content .about-text p
+{
+	position: relative;
+	right: 100px;
+	font-size: 16px;
+	line-height: 25px;
+	color: var(--text-black-700);
+
+}
+
+.about-content .kelom-nama
+{
+	flex: 0 0 60%;
+	max-width: 60%;
+
+}
+
+.about-content .kelom-info
+{
+	flex: 0 0 40%;
+	max-width: 40%;
+
+}
+
+
+.section-judul h2{
+	position: relative;
+	right: 100px;
+	color: var(--text-black-900);
+}
+
+
+
+
+
+.main-content{
+	
+	width: 100%;
+	height: 1600px;
+	background-image:  url(gambar/about.jpg);
+	background-size: cover;
+	position: center;
+	background-repeat: no-repeat;
+}
+
+
+
+/*** our team**/
+
+.team-section
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	right: 100px;
+}
+
+.card{
+	height: 500px;
+	width: 290px;
+	margin: 30px;
+	box-shadow: 0 3px 5px #000;
+	border-radius: 10px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.card .b-image img{
+	width: 100%;
+	height: 230px;
+	object-fit: cover;
+	clip-path: polygon(0 0, 100% 0%, 100% 70%, 45% 100%, 0 70% );
+
+}
+
+.card .pic img{
+	height: 120px;
+	width:120px;
+	border-radius: 50%;
+	border: 10px solid #D4D7DA;
+	margin-top: -90px;
+	position: relative;
+
+
+}
+
+.card .info-team h3{
+	
+	color: var(--text-black-900);
+	font-size: 20px;
+	padding:10px;
+	font-family: 'Fuzzy Bubbles', cursive;
+	
+
+}
+
+.card .info-team span{
+	font-size: 15px;
+	color: #1428A9;
+	font-family: 'Poppins', sans-serif;
+}
+
+.card .info-team p{
+	font-size: 15px;
+	padding: 10px 20px;
+	color: #1428A9;
+	font-family: 'Poppins', sans-serif;
+
+
+}
+
+.card .info-team .icon a{
+	font-size: 20px;
+	text-decoration: none;
+	color: #e74c3c;
+	margin-top: 20px;
+	padding:  0 5px;
+}
+
+.card .info-team .icon a:hover
+{
+	color: #1428A9 ;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+.baca-hik{
+	position: relative;
+	top: 1800px;
+	padding: 100px 200px;
+}
+
+
+
+.baca-hik h2{
+	font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: var(--white-color);
+    
+
+}
+
+.baca-hik p {
+    font-size: 14px;
+    margin: 0px 0;
+    color: var(--white-color);
+    text-align: justify;
+    margin-right: 40px;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.baca-hik h4{
+	font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white-color);
+}
